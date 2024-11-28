@@ -32,7 +32,7 @@ Given that it’s a viral trend, my next goal is to turn this into a full-fledge
 
 3. **On the server:**
    - Create a `.env` file and add the following (make sure there are **no spaces** around the `=` signs):
-   ```env
+   ```
    DB_HOST=your_database_host
    DB_USER=your_database_username
    DB_PASSWORD=your_database_password
@@ -40,7 +40,7 @@ Given that it’s a viral trend, my next goal is to turn this into a full-fledge
 
 4. **Initialize the database:**
     - In the server terminal, run the following command:
-    ```console
+    ```
     npm run init_tables
     ```
     Once you see `Tables created successfully`, proceed to the next step.
@@ -53,7 +53,7 @@ Given that it’s a viral trend, my next goal is to turn this into a full-fledge
 
 6. **Now, have fun!**
 
-##**Troubleshooting (Form not working)**
+**##Troubleshooting (Form not working)**
 If the form does not work, go to `app.js` file in the server. (/src/app.js)
 Find the following line and change the `127.0.0.1` and the `port number` to match what you see in the browser's `index.html` (for example, `https://localhost:3000`):
 ```js
