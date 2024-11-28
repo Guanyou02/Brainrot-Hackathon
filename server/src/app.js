@@ -10,7 +10,7 @@ const cors = require('cors')
 const app = express();
 // Enable CORS before setting up routes
 app.use(cors({
-    origin: 'http://127.0.0.1:5500', // Front 
+    origin: 'http://127.0.0.1:5500',
 }));
 
 //////////////////////////////////////////////////////
