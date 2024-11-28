@@ -5,7 +5,7 @@ module.exports.insertStories = (data, callback) => {
         INSERT INTO Stories (name, moment)
         VALUES (?, ?);
         `;
-    const VALUES = [data.name, data.stories];
+    const VALUES = [data.name, data.moment];
 
     pool.query(SQLSTATEMENT, VALUES, callback)
 }

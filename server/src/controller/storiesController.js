@@ -1,6 +1,6 @@
 const model = require("../model/storiesModel")
 
-module.exports = (req, res, next) => {
+module.exports.createNewstories = (req, res, next) => {
     const data = {
         name: req.body.name,
         moment: req.body.moment
@@ -21,7 +21,7 @@ module.exports = (req, res, next) => {
     model.insertStories(data, callback);
 }
 
-module.exports = (req, res, next) => {
+module.exports.readAllstories = (req, res, next) => {
     const callback = (error, results, fields) => {
         if (error) {
             console.error("Error selectAllChallenge:", error);
@@ -35,12 +35,15 @@ module.exports = (req, res, next) => {
         }
 
         let output = []
-        results.forEach(moment => {
+        results.forEach(stories => {
             output.push({
-                name: results.name,
-                moment: results.momenet
+                id: stories.user_id,
+                name: stories.name,
+                moment: stories.moment
             })
         });
+
+        res.status(200).json(output);
     }
 
     model.selectAllChallenge(callback);
