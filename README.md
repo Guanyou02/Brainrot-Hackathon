@@ -53,7 +53,7 @@ Given that it’s a viral trend, my next goal is to turn this into a full-fledge
 
 6. **Now, have fun!**
 
-**## Troubleshooting (Form not working)**
+## Troubleshooting (Form not working)
 If the form does not work, go to `app.js` file in the server. (/src/app.js)
 Find the following line and change the `127.0.0.1` and the `port number` to match what you see in the browser's `index.html` (for example, `https://localhost:3000`):
 ```js
